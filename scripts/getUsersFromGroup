@@ -1,0 +1,20 @@
+#!/bin/bash
+
+
+#Initital list of groups must be provided as parameter
+#Run getGroups script to generate such file
+FILE=$1
+
+#Go over the list of groups. For each group open its website and get a list of members.
+#adr has the link to the website of group
+#name has the name of group
+
+while IFS=';' read -r adr name;
+do
+	echo ================================================
+	echo $name
+	echo ===============================================	
+	curl -s https://www.rd-alliance.org${adr} | grep "/user/[0-9]*\">[a-zA-Z -]*</a></span>" | grep -o "/user/[0-9]*\">[a-zA-Z -]*" | sed -e 's/">/;/g' | cut -d '/' -f3 	
+done < $FILE
+
+

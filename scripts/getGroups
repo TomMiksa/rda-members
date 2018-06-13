@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ "$#" -ne 1 ]; then
+echo "=========================================================="   
+echo "Provide link to the list of the groups on the RDA website."
+echo "For example to get all working groups, use: https://www.rd-alliance.org/groups/working-groups"
+echo "=========================================================="
+fi
+
+ADR=$1
+
+curl -s $ADR | grep -o "/groups/[a-zA-Z0-9 -]*.html\">[a-zA-Z -/]*" | sed -e 's/">/;/g'
