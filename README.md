@@ -11,6 +11,6 @@ This data can be later used to analyse the structure of the RDA, e.g. to find ou
 <b>inpit</b> folder contains 3 files with lists of groups for each type of group.
 For example *input-WGs* was created by parsing https://www.rd-alliance.org/groups/working-group
 
-<b>result</b> folder contains 3 files with lists of members for each group belonging to the given type of group.
+<b>output</b> folder contains 3 files with lists of members for each group belonging to the given type of group.
 For example, *result-WGs* contains all WGs and memebers belonging to each of them
 The first column has the ID of the user. If you concatenate it with the https://www.rd-alliance.org/user/ then you get the profile of a person. The second column has user’s name.
