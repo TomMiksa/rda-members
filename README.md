@@ -3,6 +3,7 @@
 This repository provides scripts to parse the official website of the RDA to get:
 - a list of WGs, IGs and coordination groups
 - a list of users belonging to each group
+- *new* distance between working groups that is quantified by counting common group members. See <b>wg-distance</b> folder.
 
 This data can be later used to analyse the structure of the RDA, e.g. to find out connections between groups.
 
