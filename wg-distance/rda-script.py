@@ -19,7 +19,7 @@ def createDataStructures(lines):
 	for line in lines:
 	
 		#remove rubbish from the file, e.g. remove &amp; #2 from Data Type Registries WG
-		line = line.split("WG")[0]
+		line = line.split(" WG")[0]
 		
 		#if starts with = then read  next line
 		if "=" in line :
