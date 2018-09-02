@@ -85,7 +85,7 @@ if len(sys.argv) < 2 :
 filename = sys.argv[1] 
 	
 # Load the list of groups into lines variable
-lines = loadFromFile('result-WGs.txt')
+lines = loadFromFile(filename)
 
 # Parse the list
 group_list = createDataStructures(lines)
